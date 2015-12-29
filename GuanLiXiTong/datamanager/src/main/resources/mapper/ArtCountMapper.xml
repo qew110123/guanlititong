@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="artCountMapper">
+	<resultMap id="BaseResultMap" type="artCountModel">
+		<id column="id" property="id" jdbcType="BIGINT" />
+		<result column="class_one" property="classOne" jdbcType="VARCHAR" />
+		<result column="class_two" property="classTwo" jdbcType="VARCHAR" />
+		<result column="class_three" property="classThree" jdbcType="VARCHAR" />
+		<result column="count_num" property="countNum" jdbcType="BIGINT" />
+		<result column="count_data" property="countData" jdbcType="VARCHAR" />
+		<result column="data" property="data" jdbcType="TIMESTAMP" />
+		<result column="updata" property="updata" jdbcType="TIMESTAMP" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, class_one, class_two, class_three, count_num, count_data, data,
+		updata
+	</sql>
+	<select id="getAll" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from art_count
+	</select>
+
+
+	<select id="findBydata" parameterType="string" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		FROM art_count where art_count.count_data>=#{countData} ORDER BY art_count.count_data
+	</select>
+</mapper>
