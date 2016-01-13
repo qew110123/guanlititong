@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>artcount.html</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=UTF-8">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+	<h4>采集每日总播放量条数：</h4>
+	<table border="1">
+
+		<tr>
+			<th>日期</th>
+			<#list data.Topdata as artCount>
+			<th>${artCount}</th>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>优酷</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[0][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>爱奇艺</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[1][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>腾讯</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[2][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>搜狐</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[3][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>乐视</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[4][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>迅雷看看</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[5][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>总数</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[6][artCount]!}</td>
+	    	</#list>
+		</tr>
+	</table>
+	
+	
+	<h4>采集每日评分量条数：</h4>
+	<table border="1">
+		<tr>
+			<th>日期</th>
+			<#list data.Topdata as artCount>
+			<th>${artCount}</th>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>优酷</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[0][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>爱奇艺</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[1][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>腾讯</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[2][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>搜狐</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[3][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>乐视</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[4][artCount]!}</td>
+	    	</#list>
+		</tr>
+			<td>总数</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[5][artCount]!}</td>
+	    	</#list>
+		</tr>
+	</table>
+	
+	<h4>采集每日总数条数(电视剧)：</h4>
+	<table border="1">
+		<tr>
+			<th>日期</th>
+			<#list data.Topdata as artCount>
+			<th>${artCount}</th>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>每日总播放量</td>
+			<#list data.Topdata as artCount>
+			<td>${data.countZongShuJuList[6][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>每日评分量</td>
+			<#list data.Topdata as artCount>
+			<td>${data.pingfenList[5][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>每日评论量</td>
+			<#list data.Topdata as artCount>
+			<td>${data.CountPingLun[0][artCount]!}</td>
+	    	</#list>
+		</tr>
+		
+		<tr>
+			<td>每日搜索指数</td>
+			<#list data.Topdata as artCount>
+			<td>${data.CountSouShuoZhiShu[0][artCount]!}</td>
+	    	</#list>
+		</tr>
+		<tr>
+			<td>每日媒体关注度</td>
+			<#list data.Topdata as artCount>
+			<td>${data.CountMeiTiGuanZhuDu[0][artCount]!}</td>
+	    	</#list>
+		</tr>
+	</table>
+		111
+	111
+	<button>同步当前数据</button>
+	dfasdfasdfsdfs
+	
+</body>
+</html>
